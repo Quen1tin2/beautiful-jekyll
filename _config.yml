@@ -20,7 +20,7 @@ author: OSEI-TUTU QUENTIN
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
+  About Me: "This is a feature of displaying beautiful_jekyll"
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
