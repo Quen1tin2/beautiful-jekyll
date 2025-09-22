@@ -8,10 +8,12 @@
 ############################
 # --- Required options --- #
 ############################
-# Name of website
+
 title: My Website
-# Short description of your site
 description: A virtual proof that I'm awesome
+
+# Your name to show in the footer
+author: OSEI-TUTU QUENTIN
 
 
 
