@@ -9,8 +9,12 @@
 # --- Required options --- #
 ############################
 
-title: My website
+# Name of website
+title: My Website
+
+# Short description of your site
 description: A virtual proof that I'm awesome
+
 
 
 ###############################################
