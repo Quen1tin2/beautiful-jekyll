@@ -17,15 +17,15 @@ description: A virtual proof that I'm awesome
 # --- List of links in the navigation bar --- #
 
 
+
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
   Resources:
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     - Learn markdown: "http://www.markdowntutorial.com/"
-    - Getting Started: "getstarted"  
-    Table Demo: "table-demo"
-# --- Logo --- #
+    - Getting Started: "getstarted"                         
+  Table Demo: "table-demo"
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
