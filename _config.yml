@@ -4,14 +4,11 @@
 ### set up your website you should go through all these settings and edit them, but after
 ### the initial set up you won't need to come back to this file often.
 ###########################################################
-
 ############################
 # --- Required options --- #
 ############################
-
 # Your name to show in the footer
 author: "Quentin tutu"
-
 
 # Name of website
 title: "My website"
