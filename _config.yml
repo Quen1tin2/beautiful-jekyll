@@ -22,7 +22,7 @@ navbar-links:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
     - Geting started: "Get Started"
-  Author's home: ""
+  Author's home: "https://deanattali.com""
 Table Demo: "table-demo"
 
 # --- Logo --- #
