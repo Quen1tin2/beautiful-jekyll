@@ -44,7 +44,7 @@ round-avatar: true
 # Select the social network links that you want to show in the footer.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "yunt.kari@gmail.com"
+  email: ""
   facebook: ""
   github: ""
   youtube: ""
@@ -94,7 +94,7 @@ navbar-border-col: "#DA70D6"
 page-col: "white"
 text-col: "black"
 link-col: "royalblue"
-hover-col: "firebrick"
+hover-col: "red"
 footer-col: "#DA70D6"
 footer-text-col: "black"
 footer-link-col: "royalblue"
