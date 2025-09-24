@@ -184,6 +184,38 @@
                  <li>  {{ item }}  </li>
               {% endfor %}
 
+
+###  PAGE CONSTRUCTION WITH LIQUID
+ 
+      ###
+      ###  default.html layout
+      ###
+      
+           <html>
+           {% include head.html %}
+	     <body>   
+
+	       {% include header.html %}   
+
+	       {{ content }}     
+
+	       {% include footer.html %}   
+
+	     </body>  
+           </html>     
+
+      ###
+      ###  {% include xxxx.html %}
+      ###  is replaced by content
+      ###  from the file xxxx.html
+      ###  in the _includes folder.
+      ### 
+      
+      ###  {% include xxxx.html %} Files: 
+
+       >>  head.html
+       >>  header.html
+       >>  footer.html
             </ul>
           </td>
         </tr> 
