@@ -1,5 +1,140 @@
 ---
-layout: default
+layout: liquid-table
+title: 'amiright?'
+reynolds:
+  strengths:
+  - good father
+  - funny
+  - dated alanis morissette
+  weaknesses:
+  - singing
+  - green lantern movie
+  - tennis backhand
+gosling:
+  strengths:
+  - builds houses
+  - is a real boy
+  - never dated alanis morissette
+  weaknesses:
+  - micky mouse club
+  - cries a lot
+  - not ryan reynolds
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+        h1, h2, h3, h4 {
+            color: #444;
+            text-align: center;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #eee;
+            margin: 20px 0;
+        }
+        .ryan-card-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .ryan-reynolds-card, .ryan-gosling-card {
+            background-color: #fafafa;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 300px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #e9e9e9;
+            margin-bottom: 5px;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
 
-{{ content }}
+    <div class="container">
+
+        <h1>{{ page.title }}</h1>
+        <hr>
+
+        <img src="/assets/img/ryan-v-ryan.jpg" alt="Ryan V Ryan">
+
+        <h2>Deep Thoughts By AI</h2>
+        <p>Ryan Reynolds is known for his quick-witted humor and action-comedy roles, most famously as Deadpool, blending sarcasm with charm. Ryan Gosling, on the other hand, often gravitates toward dramatic and romantic roles, such as in La La Land or Drive, showcasing a brooding intensity and emotional depth. While both actors have versatile careers, Reynolds leans more toward comedy and irreverence, whereas Gosling is celebrated for his nuanced, introspective performances.</p>
+
+        <hr>
+
+        <div class="ryan-card-container">
+            <div class="ryan-reynolds-card">
+                <h3>Ryan Reynolds</h3>
+                <h4>Strengths 💪</h4>
+                <ul>
+                    {% for strength in page.reynolds.strengths %}
+                        <li>{{ strength }}</li>
+                    {% endfor %}
+                </ul>
+                <h4>Weaknesses 🤦‍♂️</h4>
+                <ul>
+                    {% for weakness in page.reynolds.weaknesses %}
+                        <li>{{ weakness }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="ryan-gosling-card">
+                <h3>Ryan Gosling</h3>
+                <h4>Strengths 💪</h4>
+                <ul>
+                    {% for strength in page.gosling.strengths %}
+                        <li>{{ strength }}</li>
+                    {% endfor %}
+                </ul>
+                <h4>Weaknesses 🤦‍♂️</h4>
+                <ul>
+                    {% for weakness in page.gosling.weaknesses %}
+                        <li>{{ weakness }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
