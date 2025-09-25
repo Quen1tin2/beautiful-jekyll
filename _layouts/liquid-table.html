@@ -1,17 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    <style>
-        /* Your CSS */
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>{{ page.title }}</h1>
-        <hr>
-        {{ content }} </div>
-</body>
-</html>
+---
+layout: default
+title: liquid-table
+---
+
+{{ content }}
+
+<h2>Ryan vs Ryan: Who Wore It Best</h2>
+
+<div class="table-demo-container">
+  <table class="table-demo">
+    <thead>
+      <tr>
+        <th>Ryan Reynolds</th>
+        <th>Ryan Gosling</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!-- Ryan Reynolds Column -->
+        <td>
+          <strong>Strengths</strong>
+          <ul>
+            {% for item in page.reynolds.strengths %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+
+          <strong>Weaknesses</strong>
+          <ul>
+            {% for item in page.reynolds.weaknesses %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </td>
+
+        <!-- Ryan Gosling Column -->
+        <td>
+          <strong>Strengths</strong>
+          <ul>
+            {% for item in page.gosling.strengths %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+
+          <strong>Weaknesses</strong>
+          <ul>
+            {% for item in page.gosling.weaknesses %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<br>
+
+<hr>
+
+<br>
+
+
+
+<style>
+  pre{
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #eee;
+  width: 750px!ie7;
+  padding-bottom: 20px!ie7;
+}
+
+ui {
+  padding-inline-start: 10px;
+  }
+  
+table {
+  margin-left: 20px;
+  }
+  
+</style>
