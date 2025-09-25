@@ -1,85 +1,128 @@
----
-layout: default
-title: liquid-table
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+        h1, h2, h3, h4 {
+            color: #444;
+            text-align: center;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #eee;
+            margin: 20px 0;
+        }
+        .table-container {
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        thead {
+            background-color: #f2f2f2;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul li {
+            padding: 4px 0;
+        }
+    </style>
+</head>
+<body>
 
-{{ content }}
+    <div class="container">
 
-<h2>Ryan vs Ryan: Who Wore It Best</h2>
+        <h1>{{ page.title }}</h1>
+        <hr>
 
-<div class="table-demo-container">
-  <table class="table-demo">
-    <thead>
-      <tr>
-        <th>Ryan Reynolds</th>
-        <th>Ryan Gosling</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <!-- Ryan Reynolds Column -->
-        <td>
-          <strong>Strengths</strong>
-          <ul>
-            {% for item in page.reynolds.strengths %}
-              <li>{{ item }}</li>
-            {% endfor %}
-          </ul>
+        {{ content }}
 
-          <strong>Weaknesses</strong>
-          <ul>
-            {% for item in page.reynolds.weaknesses %}
-              <li>{{ item }}</li>
-            {% endfor %}
-          </ul>
-        </td>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Ryan Reynolds</th>
+                        <th>Ryan Gosling</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Strengths</strong></td>
+                        <td>
+                            <ul>
+                                {% for strength in page.reynolds.strengths %}
+                                    <li>{{ strength }}</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                {% for strength in page.gosling.strengths %}
+                                    <li>{{ strength }}</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Weaknesses</strong></td>
+                        <td>
+                            <ul>
+                                {% for weakness in page.reynolds.weaknesses %}
+                                    <li>{{ weakness }}</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                {% for weakness in page.gosling.weaknesses %}
+                                    <li>{{ weakness }}</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-        <!-- Ryan Gosling Column -->
-        <td>
-          <strong>Strengths</strong>
-          <ul>
-            {% for item in page.gosling.strengths %}
-              <li>{{ item }}</li>
-            {% endfor %}
-          </ul>
+    </div>
 
-          <strong>Weaknesses</strong>
-          <ul>
-            {% for item in page.gosling.weaknesses %}
-              <li>{{ item }}</li>
-            {% endfor %}
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-
-<br>
-
-<hr>
-
-<br>
-
-
-
-<style>
-  pre{
-  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-  margin-bottom: 10px;
-  padding: 5px;
-  background-color: #eee;
-  width: 750px!ie7;
-  padding-bottom: 20px!ie7;
-}
-
-ui {
-  padding-inline-start: 10px;
-  }
-  
-table {
-  margin-left: 20px;
-  }
-  
-</style>
+</body>
+</html>
